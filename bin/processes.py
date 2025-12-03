@@ -27,7 +27,7 @@ def run_pyrodigal_gv(filepath_in, out_dir, threads):
     """
 
     # true
-    orf_finder = pyrodigal_gv.ViralGeneFinder(meta=True)
+    orf_finder = pyrodigal_gv.ViralGeneFinder(meta=True, closed=True)
 
     def _find_genes(record):
         genes = orf_finder.find_genes(str(record.seq))
